@@ -1,0 +1,21 @@
+{
+
+  "manifest_version": 2,
+  "name": "Hooktube Redirect",
+  "version": "1.0",
+
+  "description": "Redirects all YouTube links to HookTube.",
+  
+  "icons": {
+    "48": "icons/hooktube-48.ico"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "run_at": "document_start",
+      "js": ["makehook.js"]
+    }
+  ]
+
+}
