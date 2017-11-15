@@ -1,5 +1,5 @@
 var loc = window.location.href;
-if (loc.includes("youtube")&&loc.includes("watch")){
+if (loc.includes("youtube")){
 	window.location=loc.replace("youtube", "hooktube");
 }
 else if (loc.includes("youtu.be")){
