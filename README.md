@@ -1,4 +1,4 @@
-# hooktube-redirect
+# invidious-redirect
 
 # Now redirects to invidio.us instead of hooktube - see Hooktube changelog for details
 
