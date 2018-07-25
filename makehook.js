@@ -12,5 +12,5 @@ else if (loc.includes("youtube-nocookie")){
 	window.location=loc.replace("youtube-nocookie.com/", "invidio.us/");
 }
 if(loc.includes("/results?search_query")){
-        window.location=loc.replace("/results?search_query", "/search?q");
+        window.location=loc.replace("/results?search_query", "/query?q");
 }
