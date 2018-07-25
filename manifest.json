@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "Invidious Redirect",
-  "version": "1.4",
+  "version": "1.5",
 
   "description": "Redirects all YouTube links to Invidious. Previously hooktube-redirect.",
   
