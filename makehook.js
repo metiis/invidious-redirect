@@ -12,6 +12,9 @@ else if (newloc.includes("youtu.be")){
 else if (newloc.includes("youtube-nocookie")){
 	newloc=newloc.replace("youtube-nocookie.com/", "invidio.us/");
 }
+else if (newloc.includes("hooktube")){
+	newloc=newloc.replace("hooktube.com", "invidio.us");
+}
 if(newloc.includes("/results?q")){
         newloc=newloc.replace("/results?q", "/search?q");
 }
