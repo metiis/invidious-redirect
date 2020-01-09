@@ -10,6 +10,19 @@
     "48": "icons/hooktube-48.ico"
   },
 
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": [
+    "storage"
+  ],
+
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "icons/hooktube-48.ico"
+  },
+
   "content_scripts": [
     {
       "matches": ["*://*.youtube.com/*"],
