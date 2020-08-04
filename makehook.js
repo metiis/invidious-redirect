@@ -4,6 +4,9 @@ function onError(error) {
 
 function onGot(item) {
   var instance = item.instance;
+  if (!instance) {
+    instance = 'invidiou.site';
+  }
   var loc = window.location.href;
   var newloc = loc;
   if (newloc.includes("m.youtube.com")) {

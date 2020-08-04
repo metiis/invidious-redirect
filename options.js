@@ -2,9 +2,12 @@ function saveOptions(e) {
   e.preventDefault();
   var instance = document.querySelector("#instance").value.trim();
   instance = instance.replace(/^https?:?\/?\/?/, '').replace('\/$');
+  if (!instance) {
+    return alert('You must specify an appropriate Invidious domain');
+  }
   browser.storage.sync.set({
     instance: instance,
-  });
+  }).then(() => alert('Saved: ' + instance + '!'));
 }
 
 function restoreOptions() {
