@@ -9,6 +9,9 @@ function onGot(item) {
   }
   var loc = window.location.href;
   var newloc = loc;
+  if (newloc.includes("https://www.")) {
+    newloc = newloc.replace("https://www.", "https://");
+  }
   if (newloc.includes("m.youtube.com")) {
     newloc = newloc.replace("m.youtube.com", instance);
   }
