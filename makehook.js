@@ -3,10 +3,9 @@ function onError(error) {
 }
 
 function onGot(item) {
+  if (!item.enabled) return;
+
   var instance = item.instance;
-  if (!instance) {
-    instance = 'invidiou.site';
-  }
   var loc = window.location.href;
   var newloc = loc;
   if (newloc.includes("m.youtube.com")) {
@@ -30,5 +29,8 @@ function onGot(item) {
   window.location = newloc;
 }
 
-let getting = browser.storage.sync.get("instance");
+let getting = browser.storage.sync.get({
+  enabled: true,
+  instance: 'invidiou.site',
+});
 getting.then(onGot, onError);

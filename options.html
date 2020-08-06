@@ -8,10 +8,19 @@
   <body>
 
     <form>
-        <label>Invidious Instance <small>(domain only)</small><br />
-          <input type="text" id="instance" >
+      <p>
+        <label>Enable Redirect 
+          <input type="checkbox" id="enabled" />
         </label>
+      </p>
+      <p>
+        <label>Invidious Instance <small>(domain only)</small><br />
+          <input type="text" id="instance" />
+        </label>
+      </p>
+      <p>
         <button type="submit">Save</button>
+      </p>
     </form>
 
     <script src="options.js"></script>
