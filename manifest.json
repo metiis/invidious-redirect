@@ -2,12 +2,13 @@
 
   "manifest_version": 2,
   "name": "Invidious Redirect",
-  "version": "1.7",
+  "version": "1.9.1",
 
-  "description": "Redirects all YouTube links to Invidious. Previously hooktube-redirect.",
+  "description": "Redirects all YouTube links to any Invidious instance. Previously hooktube-redirect.",
   
   "icons": {
-    "48": "icons/hooktube-48.ico"
+    "48": "icons/invidious-redirect.svg",
+    "96": "icons/invidious-redirect.svg"
   },
 
   "content_scripts": [
@@ -16,6 +17,25 @@
       "run_at": "document_start",
       "js": ["makehook.js"]
     }
-  ]
+  ],
+
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "icons/invidious-redirect.svg",
+    "default_title": "Invidious Redirect",
+    "default_popup": "options.html"
+  },
+
+  "options_ui": {
+    "page": "options.html"
+  },
+
+  "permissions": ["storage"],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "invidious-redirect@github.com"
+    }
+  }
 
 }
